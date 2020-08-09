@@ -1,0 +1,22 @@
+{
+    "name": "commnerd/tasker",
+    "description": "Base library for handling task management",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Michael J. Miller",
+            "email": "commnerd@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Tasker\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    }
+}
