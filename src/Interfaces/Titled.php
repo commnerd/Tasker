@@ -9,14 +9,14 @@ namespace Tasker\Interfaces;
  */
 interface Titled {
     /**
-     * Get the title of the task
+     * Get the title of the entity
      *
      * @return string
      */
     public function getTitle(): string;
 
     /**
-     * Set the title of the task
+     * Set the title of the entity
      *
      * @param string $title
      * @return void

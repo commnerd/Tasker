@@ -16,7 +16,7 @@ trait Titled {
     protected string $title;
 
     /**
-     * Get the title of the task
+     * Get the title of the entity
      *
      * @return string
      */
@@ -26,7 +26,7 @@ trait Titled {
     }
 
     /**
-     * Set the title of the task
+     * Set the title of the entity
      *
      * @param string $title
      * @return void
