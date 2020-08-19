@@ -22,9 +22,9 @@ trait Grouped {
      *
      * @return Group
      */
-    public function getParentGroup(): Group
+    public function getParentGroup(): ?Group
     {
-        return $this->parentGroup;
+        return $this->parentGroup ?? null;
     }
 
     /**

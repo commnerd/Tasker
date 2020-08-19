@@ -2,6 +2,7 @@
     "name": "commnerd/tasker",
     "description": "Base library for handling task management",
     "type": "library",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Michael J. Miller",

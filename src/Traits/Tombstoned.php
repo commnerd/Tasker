@@ -24,7 +24,7 @@ trait Tombstoned {
      */
     public function getDeletedAt(): ?DateTime
     {
-        return $this->deletedAt;
+        return $this->deletedAt ?? null;
     }
 
     /**

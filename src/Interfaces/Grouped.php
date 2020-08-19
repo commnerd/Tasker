@@ -15,7 +15,7 @@ interface Grouped {
      *
      * @return Group
      */
-    public function getParentGroup(): Group;
+    public function getParentGroup(): ?Group;
 
     /**
      * Set the parent group of entity

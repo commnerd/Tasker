@@ -23,7 +23,7 @@ trait Tagged {
      *
      * @return array|null
      */
-    public function getTags(): ?array
+    public function getTags(): array
     {
         return $this->tags;
     }
@@ -36,7 +36,7 @@ trait Tagged {
      */
     public function addTag(Tag $tag): bool
     {
-        $index = array_search($tag, $this->tags);
+        $index = $this->getTagIndex($tag);
 
         if($index >= 0) {
             return false;
@@ -54,7 +54,7 @@ trait Tagged {
      */
     public function removeTag(Tag $tag): bool
     {
-        $index = array_search($tag, $this->tags);
+        $index = $this->getTagIndex($tag);
 
         if($index < 0) {
             return false;
@@ -63,5 +63,21 @@ trait Tagged {
         $this->tags = array_splice($this->tags, $index, 1);
 
         return true;
+    }
+
+    /**
+     * Mimic array_search, but for list of tags
+     *
+     * @param Tag $tag Tag to search for in array
+     * @return integer The index of the tag, -1 if not found
+     */
+    private function getTagIndex(Tag $tag): int
+    {
+        foreach($this->tags as $index => $registeredTag) {
+            if($tag->getTitle() === $registeredTag->getTitle()) {
+                return $index;
+            }
+        }
+        return -1;
     }
 }

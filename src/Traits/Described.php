@@ -23,7 +23,7 @@ trait Described
      */
     public function getDescription(): ?string
     {
-        return $this->description;
+        return $this->description ?? '';
     }
 
     /**
